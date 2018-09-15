@@ -1,0 +1,16 @@
+{
+  "name": "LenomdubotcommesurHEROKU",
+  "version": "1.0.0",
+  "description": "Remuuuu",
+  "main": "index.js",
+  "scripts": {
+    "test": "!help"
+  },
+  "author": "MTGPROD",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "fs": "0.0.1-security",
+    "snekfetch": "^4.0.4"
+  }
+}
