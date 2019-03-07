@@ -9,4 +9,8 @@ client.on('message', message => {
      } 
 })
 
+client.on('ready', () {
+    client.user.setGame('Pré-inscription ouvertes: +register')
+})
+
 client.login(process.env.TOKEN) 
