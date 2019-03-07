@@ -17,9 +17,10 @@ client.on('message', message => {
 
           const collector = message.channel.createMessageCollector(filter, { time: 30000 });
 
-          collector.on('collect', m => message.channel.send(`**${m.author}** a attrapé la boule <:smash:512000445791731718>, il peut désormais l'utiliser. `));
+          collector.on('collect', m => message.channel.send(`**${m.author.username}#${m.author.discriminator}** a attrapé la boule <:smash:512000445791731718>, il peut désormais l'utiliser. `));
 
-          collector.on('end', collected => message.channel.send(`Temps écoulé, personne récupère la boule`))
+          collector.on('end', collected => message.channel.send(`Temps écoulé`)) 
+
      } 
 })
 
