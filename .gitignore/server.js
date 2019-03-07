@@ -9,4 +9,4 @@ client.on('message', message => {
      } 
 })
 
-client.login('NDk3MTAxNTE0MDc5NDY5NTY5.D2LH9Q.VzOjWWhYx6avzT3aY5bLIIi3STg') 
+client.login(process.evn.TOKEN) 
