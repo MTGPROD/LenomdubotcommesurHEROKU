@@ -12,7 +12,7 @@ client.on('message', message => {
           const Juge = message.author.id
           
           message.channel.send('Le premier qui dit SMASH pourra utiliser la boule <:smash:512000445791731718>')
-          const filter = m => m.content.includes('discord');
+          const filter = m => m.content.includes('SMASH');
 
           const collector = message.channel.createMessageCollector(filter, { time: 30000 });
 
