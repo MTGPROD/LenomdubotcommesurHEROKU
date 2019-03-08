@@ -40,7 +40,7 @@ client.on('message', message => {
      if(message.content === prefix + 'choose') { 
           const chooseEmbed = new Discord.RichEmbed()
               .setTitle('Choisissez un personnage') 
-              .setDescription('<:hypebot:553412393708027924> <:LOYD:553412950430318592> <:pandakano:553412574188797973> <:sei:553412258688925697> <:sushimaki:553412323428139008> <:UMbrava:553412713867509760> <:windeure:553412472451760129> <:alorstoi:553412872932294666> <:baz:553412201420029953> <:friksou:553412125800792100> <:hype:553412056787976213>')
+              .setDescription('<:windertet:553525987950854144> <:makitet:553426481213210634> <:friksoutet:553429050736115732> <:engouebottet:553428607687589910> <:baztet:553428335028469760> <:kmktet:553426928430874625> <:Seitet:553525775001976872> <:kevtet:553526639733112857> <:hypetet:553427795619872792> <:pandetet:553544534089269309>')
           message.channel.send(chooseEmbed).then(msg => {
                msg.react('553427795619872792')
                msg.react('553429050736115732')
@@ -54,6 +54,11 @@ client.on('message', message => {
                msg.react('553526202007027727')
                msg.react('553525987950854144')
                msg.react('553526639733112857')
+               
+               const filter = (reaction, user) => reaction.emoji.id === '553427795619872792' && user.id != '497101514079469569'
+               const collector = msg.createReactionCollector(filter, { time: 15000 });
+               collector.on('collect', r => msg.channel.send(`**${r.author.username}** a choisi **Captain Hype**`));
+               collector.on('end', collected => console.log(`Collected ${collected.size} items`));
           })
      } 
 })
