@@ -1,8 +1,11 @@
 const Discord = require('discord.js')
 const prefix = "+"
 const client = new Discord.Client()
+const places = client.guilds.get('476039965931864074').roles.find("name", "Participants").members.size
 
 client.on('message', message => {
+     
+     
      if(message.content === prefix + 'register') {   
         const noEmbed = new Discord.RichEmbed() 
               .setColor('#e02c2c')
@@ -32,10 +35,16 @@ client.on('message', message => {
           collector.on('end', collected => message.channel.send(`Temps écoulé`)) 
 
      } 
+     
+     if(message.content === prefix + 'choose') { 
+          const chooseEmbed = new Discord.RichEmbed()
+              .setTitle('Choisissez un personnage') 
+              .setDescription('\:hypebot: \:LOYD: \:pandakano: \:sei: \:sushimaki: \:UMbrava: \:windeure: \:alorstoi: \:baz: \:friksou: \:hype:')
+     } 
 })
 
 client.on('ready', () => {
-    client.user.setGame(`Pré-inscription ouvertes: +register ${12 - NdP.members.size} Places restantes`)
+    client.user.setGame(`Pré-inscription ouvertes: +register ${places} Places restantes`)
 })
 
 client.login(process.env.TOKEN) 
