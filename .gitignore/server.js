@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const prefix = "+"
 const client = new Discord.Client()
-const places = client.guilds.get('476039965931864074').roles.find("name", "Participants").members.size
+
 
 client.on('message', message => {
      
@@ -40,11 +40,19 @@ client.on('message', message => {
           const chooseEmbed = new Discord.RichEmbed()
               .setTitle('Choisissez un personnage') 
               .setDescription('\:hypebot: \:LOYD: \:pandakano: \:sei: \:sushimaki: \:UMbrava: \:windeure: \:alorstoi: \:baz: \:friksou: \:hype:')
+          message.channel.send(chooseEmbed).then(msg => {
+               msg.react('553427795619872792')
+               msg.react('553429050736115732')
+               msg.react('553426481213210634')
+               msg.react('553428335028469760')
+               msg.react('553426928430874625') 
+               msg.react('553428335028469760')
+          })
      } 
 })
 
 client.on('ready', () => {
-    client.user.setGame(`Pré-inscription ouvertes: +register ${places} Places restantes`)
+    client.user.setGame(`Pré-inscription ouvertes: +register 9 Places restantes`)
 })
 
 client.login(process.env.TOKEN) 
