@@ -57,14 +57,14 @@ client.on('message', message => {
                
                const filter = (reaction, user) => reaction.emoji.id === '553427795619872792' && user.id != '497101514079469569'
                const collector = msg.createReactionCollector(filter, { time: 15000 });
-               collector.on('collect', r => msg.channel.send(`**${r.author.username}** a choisi **Captain Hype**`));
+               collector.on('collect', r => msg.channel.send(`**${r.user.name}** a choisi **Captain Hype**`));
                collector.on('end', collected => console.log(`Collected ${collected.size} items`));
           })
      } 
 })
 
 client.on('ready', () => {
-    client.user.setGame(`Pré-inscription ouvertes: +register 9 Places restantes`)
+    client.user.setGame(`Pré-inscription ouvertes: +register 8 Places restantes`)
 })
 
 client.login(process.env.TOKEN) 
