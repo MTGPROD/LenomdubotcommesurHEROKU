@@ -25,7 +25,7 @@ client.on('message', message => {
      if(message.content === prefix + 'smash') {
           const Juge = message.author.id
           
-          message.channel.send('Le premier qui dit SMASH pourra utiliser la boule <:smash:512000445791731718>')
+          var smashMsg = message.channel.send('Le premier qui dit SMASH pourra utiliser la boule <:smash:512000445791731718>')
           const filter = m => m.content.includes('SMASH') && m.author.id != '497101514079469569' 
           
 
@@ -33,7 +33,7 @@ client.on('message', message => {
 
           collector.on('collect', m => message.channel.send(`**${m.author.username}#${m.author.discriminator}** a attrapé la boule <:smash:512000445791731718>, il peut désormais l'utiliser. `));
 
-          collector.on('end', collected => message.channel.send(`Temps écoulé`)) 
+          collector.on('end', collected => smashMsg.edit(`Temps écoulé`)) 
 
      } 
      
