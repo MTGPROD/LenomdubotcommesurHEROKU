@@ -10,10 +10,11 @@ client.on('message', message => {
         const noEmbed = new Discord.RichEmbed() 
               .setColor('#e02c2c')
              .setDescription(`Oops! il n'y a plus de places disponibles.`)
+        const NdP = message.guild.roles.find("name", "Participants")
         if(NdP.members.size === 12) return message.channel.send(noEmbed) 
           
         
-        const NdP = message.guild.roles.find("name", "Participants")
+        
         message.member.setRoles(['553282040011816960'])
            const registerEmbed = new Discord.RichEmbed()
                  .setColor('#e02c2c')
