@@ -39,7 +39,7 @@ client.on('message', message => {
      if(message.content === prefix + 'choose') { 
           const chooseEmbed = new Discord.RichEmbed()
               .setTitle('Choisissez un personnage') 
-              .setDescription('\:hypebot: \:LOYD: \:pandakano: \:sei: \:sushimaki: \:UMbrava: \:windeure: \:alorstoi: \:baz: \:friksou: \:hype:')
+              .setDescription('<:hypebot:553412393708027924> <:LOYD:553412950430318592> <:pandakano:553412574188797973> <:sei:553412258688925697> <:sushimaki:553412323428139008> <:UMbrava:553412713867509760> <:windeure:553412472451760129> <:alorstoi:553412872932294666> <:baz:553412201420029953> <:friksou:553412125800792100> <:hype:553412056787976213>')
           message.channel.send(chooseEmbed).then(msg => {
                msg.react('553427795619872792')
                msg.react('553429050736115732')
