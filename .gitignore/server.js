@@ -99,7 +99,7 @@ client.on('message', message => {
 
     try {
 
-        delete require.cache[require.resolve(`./commands/${cmd}.js`)]
+        delete require.cache[require.resolve(`./${cmd}.js`)]
 
        
 
@@ -109,7 +109,7 @@ client.on('message', message => {
 
         
 
-        let commandFile = require(`./commands/${cmd}.js`)
+        let commandFile = require(`./${cmd}.js`)
 
         commandFile.run(client, message, args);
 
