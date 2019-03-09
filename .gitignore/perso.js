@@ -12,7 +12,7 @@ exports.run = (message, client, args) => {
                     .addField(`Attaque blue`, `HYPE PUNCH (40%) `, true) 
                     .addField(`Talent`, `**Recharge:** A 1/10 de pouvoir Smash par tour.`)
                     .addField(`<:smash:512000445791731718>`, `Laser Jauvert (60%)`)
-                    .setThumbnail('')
+                    .setThumbnail('https://cdn.discordapp.com/attachments/437664075099668482/493154301779378187/V3.png')
                message.channel.send(charEmbedHype)
           } 
 } 
