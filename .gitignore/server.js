@@ -64,7 +64,7 @@ client.on('message', message => {
 })
 
 client.on('message', message => {
-     var args = message.content.slice(prefix.length).trim().split(' ')
+     
      
      if(message.content === `${prefix}perso Captain Hype `) {
           
@@ -83,23 +83,23 @@ client.on('message', message => {
      } 
 })
 
-client.on('message', message => {
 
-    let args = message.content.slice(prefix.length).trim().split(' ');
 
-    let cmd = args.shift().toLowerCase();
 
-    if(message.author.bot) return;
 
-    if(!message.content.startsWith(prefix)) return;
+    
+
+
+
+   
 
     
 
                                   
 
-    try {
+    
 
-        delete require.cache[require.resolve(`./${cmd}.js`)]
+        
 
        
 
@@ -109,17 +109,17 @@ client.on('message', message => {
 
         
 
-        let commandFile = require(`./${cmd}.js`)
+        
 
-        commandFile.run(client, message, args);
+        
 
-    } catch (e) {
+    
 
-        console.log(e.stack)
 
-    }
 
-});
+    
+
+
 
 client.on('ready', () => {
     client.user.setGame(`Pré-inscription ouvertes: +register 8 Places restantes`) 
