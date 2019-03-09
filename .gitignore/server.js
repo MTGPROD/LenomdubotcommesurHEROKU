@@ -66,7 +66,7 @@ client.on('message', message => {
 client.on('message', message => {
      
      
-     if(message.content === `${prefix}perso Captain Hype `) {
+     if(message.content === `+perso Captain Hype`) {
           
                const charEmbedHype = new Discord.RichEmbed()
                     .setAuthor(message.author.username, message.author.displayAvatarURL)
