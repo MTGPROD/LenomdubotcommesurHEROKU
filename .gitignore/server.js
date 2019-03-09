@@ -78,13 +78,14 @@ client.on('message', message => {
                     .addField(`Attaque blue`, `HYPE PUNCH (40%) `, true) 
                     .addField(`Talent`, `**Recharge:** A 1/10 de pouvoir Smash par tour.`)
                     .addField(`Pouvoir <:smash:512000445791731718>`, `Laser Jauvert (60%)`)
+                    .setThumbnail('https://cdn.discordapp.com/attachments/437664075099668482/493154301779378187/V3.png')
                message.channel.send(charEmbedHype)
           
      } 
      
      if(message.content === `+perso Kamek`) {
           
-               const charEmbedHype = new Discord.RichEmbed()
+               const charEmbedKamek = new Discord.RichEmbed()
                     .setAuthor(message.author.username, message.author.displayAvatarURL)
                     .setTitle('Informations supplémentaires pour Kamek')
                     .setDescription('"Sucite l\'Engouement"')
@@ -93,8 +94,9 @@ client.on('message', message => {
                     .addField(`Attaque rouge`, `Flood (45%)`, true)
                     .addField(`Attaque blue`, `Shitpost (45%) `, true) 
                     .addField(`Talent`, `**Spam:** Tant que Kamek est vainqueur, ses attaques gagnent +10% à chaque fois`)
-                    .addField(`Pouvoir <:smash:512000445791731718>`, `Pavé Kamek (55%)`)
-               message.channel.send(charEmbedHype)
+                    .addField(`Pouvoir <:smash:512000445791731718>`, `Pavé Kamek (55%)`) 
+                    .setThumbnail('https://cdn.discordapp.com/attachments/553281783093919762/554062762653909003/JPEG_20190308_050059.jpg')
+               message.channel.send(charEmbedKamek)
           
      } 
 })
