@@ -66,8 +66,8 @@ client.on('message', message => {
 client.on('message', message => {
      var args = message.content.slice(prefix.length).trim().split(' ')
      
-     if(message.content === prefix + 'perso') {
-          if(args[0] === 'Captain Hype') {
+     if(message.content === `${prefix}perso Captain Hype `) {
+          
                const charEmbedHype = new Discord.RichEmbed()
                     .setAuthor(message.author.username, message.author.displayAvatarURL)
                     .setTitle('Informations supplémentaires pour Captain Hype')
@@ -79,7 +79,7 @@ client.on('message', message => {
                     .addField(`Talent`, `**Recharge:** A 1/10 de pouvoir Smash par tour.`)
                     .addField(`<:smash:512000445791731718>`, `Laser Jauvert (60%)`)
                message.channel.send(charEmbedHype)
-          } 
+          
      } 
 })
 
