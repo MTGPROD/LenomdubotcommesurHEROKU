@@ -88,7 +88,7 @@ client.on('message', message => {
                const charEmbedKamek = new Discord.RichEmbed()
                     .setAuthor(message.author.username, message.author.displayAvatarURL)
                     .setTitle('Informations supplémentaires pour Kamek')
-                    .setDescription('"Sucite l\'Engouement"')
+                    .setDescription('"Alors toi la putain de ta race je vais te défoncer."')
                     .addField(`Poids`, `220% (Léger)`)
                     .addField(`Attaque verte`, `@tag (45%)`, true)
                     .addField(`Attaque rouge`, `Flood (45%)`, true)
@@ -97,6 +97,40 @@ client.on('message', message => {
                     .addField(`Pouvoir <:smash:512000445791731718>`, `Pavé Kamek (55%)`) 
                     .setThumbnail('https://cdn.discordapp.com/attachments/553281783093919762/554062762653909003/JPEG_20190308_050059.jpg')
                message.channel.send(charEmbedKamek)
+          
+     } 
+     
+     if(message.content === `+perso Friksou`) {
+          
+               const charEmbedFriksou = new Discord.RichEmbed()
+                    .setAuthor(message.author.username, message.author.displayAvatarURL)
+                    .setTitle('Informations supplémentaires pour Friksou')
+                    .setDescription('"Lance le drama."')
+                    .addField(`Poids`, `310% (Moyen)`)
+                    .addField(`Attaque verte`, `Ralliement (25%)`, true)
+                    .addField(`Attaque rouge`, `Troll (30%)`, true)
+                    .addField(`Attaque blue`, `Provocation (35%) `, true) 
+                    .addField(`Talent`, `**HS Fags:** Friskou se heal + 10% à chaque fois qu'elle fait Ralliement, mais elle ne peut pas dépasser ses PV de base.`)
+                    .addField(`Pouvoir <:smash:512000445791731718>`, `Soutien Communautaire (Donne 1/3 de se heal tous ses PV.)`) 
+                    .setThumbnail('https://cdn.discordapp.com/attachments/553281783093919762/554062762653909003/JPEG_20190308_050059.jpg')
+               message.channel.send(charEmbedFriksou)
+          
+     } 
+     
+     if(message.content === `+perso Makira`) {
+          
+               const charEmbedFriksou = new Discord.RichEmbed()
+                    .setAuthor(message.author.username, message.author.displayAvatarURL)
+                    .setTitle('Informations supplémentaires pour Makira')
+                    .setDescription('"Rend tous ça fou."')
+                    .addField(`Poids`, `310% (Moyen)`)
+                    .addField(`Attaque verte`, `Ralliement (25%)`, true)
+                    .addField(`Attaque rouge`, `Troll (30%)`, true)
+                    .addField(`Attaque blue`, `Provocation (35%) `, true) 
+                    .addField(`Talent`, `**HS Fags:** Friskou se heal + 10% à chaque fois qu'elle fait Ralliement, mais elle ne peut pas dépasser ses PV de base.`)
+                    .addField(`Pouvoir <:smash:512000445791731718>`, `Soutien Communautaire (Donne 1/3 de se heal tous ses PV.)`) 
+                    .setThumbnail('https://cdn.discordapp.com/attachments/553281783093919762/554062762653909003/JPEG_20190308_050059.jpg')
+               message.channel.send(charEmbedFriksou)
           
      } 
 })
