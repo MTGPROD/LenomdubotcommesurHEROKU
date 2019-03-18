@@ -2,30 +2,8 @@ const Discord = require('discord.js')
 const client = new Discord.Client()
 const prefix = '+';
 
-var gameData = {
-     game: false
-}
 
-let p1 = {
-		name: message.author.username
-		tag: message.author.discriminator,
-		id: message.author.id,
-		avatar: message.author.avatarURL,
-		character: 'Aucun',
-		inscrit: true,
-        pourcent: '0%' 
-    }
-    
-let p2 = {
-    	name: 'Rien'
-        tag: 'Rien',
-        id: 'Rien',
-        avatar: 'Rien',
-        character: 'Rien',
-        inscrit: false
-        pourcent: '0%'
-    }
-}
+
 
 client.on('ready', () => {
     client.user.setGame('Veuillez vous inscrire avant Avril | +register')
@@ -38,7 +16,31 @@ client.on('message', message => {
 
     if(message.author.bot) return;
     if(!message.content.startsWith(prefix)) return;
+    
+	var gameData = {
+     game: false
+}
 
+var p1 = {
+		name: message.author.username, 
+		tag: message.author.discriminator,
+		id: message.author.id,
+		avatar: message.author.avatarURL,
+		character: 'Aucun',
+		inscrit: true,
+        pourcent: '0%' 
+    }
+    
+var p2 = {
+    	name: 'Rien', 
+        tag: 'Rien',
+        id: 'Rien',
+        avatar: 'Rien',
+        character: 'Rien',
+        inscrit: false, 
+        pourcent: '0%'
+    }
+	
     try {
         delete require.cache[require.resolve(`./cmds/${cmd}.js`)]
         let commandFile = require(`./cmds/${cmd}.js`)
