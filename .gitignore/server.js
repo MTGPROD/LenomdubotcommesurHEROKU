@@ -6,18 +6,17 @@ var gameData = {
      game: false
 }
 
-var playersData = {
-	Player1 = {
+let p1 = {
 		name: message.author.username
 		tag: message.author.discriminator,
 		id: message.author.id,
 		avatar: message.author.avatarURL,
 		character: 'Aucun',
-		inscrit: true
+		inscrit: true,
         pourcent: '0%' 
-    }, 
+    }
     
-    Player2 = {
+let p2 = {
     	name: 'Rien'
         tag: 'Rien',
         id: 'Rien',
@@ -31,7 +30,6 @@ var playersData = {
 client.on('ready', () => {
     client.user.setGame('Veuillez vous inscrire avant Avril | +register')
     client.user.setStatus('dnd')
-    console.log('Yes my body was ready.')
 })
 
 client.on('message', message => {
@@ -42,9 +40,9 @@ client.on('message', message => {
     if(!message.content.startsWith(prefix)) return;
 
     try {
-        delete require.cache[require.resolve(`./${cmd}.js`)]
-        let commandFile = require(`./${cmd}.js`)
-        commandFile.run(client, message, args, gameData, playersData);
+        delete require.cache[require.resolve(`./cmds/${cmd}.js`)]
+        let commandFile = require(`./cmds/${cmd}.js`)
+        commandFile.run(client, message, args, gameData, p1,p2);
     } catch (e) {
         console.log(e.stack)
     }
