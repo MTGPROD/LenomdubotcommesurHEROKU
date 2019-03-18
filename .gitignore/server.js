@@ -9,7 +9,7 @@ var gameData = {
 var playersData = {
 	Player1 = {
 		name: message.author.username
-		discriminator: message.author.discriminator
+		tag: message.author.discriminator
 		id: message.author.id
 		avatar: message.author.avatarURL
 		character: 'Aucun'
@@ -18,7 +18,7 @@ var playersData = {
     
     Player2 = {
     	name: 'Rien'
-        discriminator: 'Rien'
+        tag: 'Rien'
         id: 'Rien'
         avatar: 'Rien'
         character: 'Rien'
