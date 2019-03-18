@@ -13,7 +13,7 @@ var playersData = {
 		id: message.author.id,
 		avatar: message.author.avatarURL,
 		character: 'Aucun',
-		inscrit: true,
+		inscrit: true
         pourcent: '0%' 
     }, 
     
@@ -41,8 +41,8 @@ client.on('message', message => {
     if(!message.content.startsWith(prefix)) return;
 
     try {
-        delete require.cache[require.resolve(`./cmds/${cmd}.js`)]
-        let commandFile = require(`./cmds/${cmd}.js`)
+        delete require.cache[require.resolve(`./${cmd}.js`)]
+        let commandFile = require(`./${cmd}.js`)
         commandFile.run(client, message, args, gameData, playersData);
     } catch (e) {
         console.log(e.stack)
