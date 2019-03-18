@@ -9,20 +9,22 @@ var gameData = {
 var playersData = {
 	Player1 = {
 		name: message.author.username
-		tag: message.author.discriminator
-		id: message.author.id
-		avatar: message.author.avatarURL
-		character: 'Aucun'
-		inscrit: true 
+		tag: message.author.discriminator,
+		id: message.author.id,
+		avatar: message.author.avatarURL,
+		character: 'Aucun',
+		inscrit: true,
+        pourcent: '0%' 
     }, 
     
     Player2 = {
     	name: 'Rien'
-        tag: 'Rien'
-        id: 'Rien'
-        avatar: 'Rien'
-        character: 'Rien'
-        incrit: false
+        tag: 'Rien',
+        id: 'Rien',
+        avatar: 'Rien',
+        character: 'Rien',
+        inscrit: false
+        pourcent: '0%'
     }
 }
 
