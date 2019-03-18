@@ -31,6 +31,7 @@ var playersData = {
 client.on('ready', () => {
     client.user.setGame('Veuillez vous inscrire avant Avril | +register')
     client.user.setStatus('dnd')
+    console.log('Yes my body was ready.')
 })
 
 client.on('message', message => {
