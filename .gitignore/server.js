@@ -28,7 +28,9 @@ var p2 = {
 	
 
 client.on('ready', () => {
-    client.user.setGame('Veuillez vous inscrire avant Avril | +register')
+    client.user.setGame('Vous êtes sur le module secondaire') 
+			
+
     client.user.setStatus('dnd')
 	console.log('Yes my body was ready.')
 	
